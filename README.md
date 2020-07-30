@@ -1,0 +1,4 @@
+# Python_test
+auto
+仅仅是用于自动化测试本地服务器部署的MES
+主要运用了Python+selenium，目前未使用pytest和unittest框架，后期会逐渐学习使用
