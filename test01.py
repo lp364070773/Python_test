@@ -10,14 +10,15 @@ headers = {
    }  # get方法其它加个ser-Agent就可以了
 d = {"j_username": "lupeng",
  "j_password": "123456",
- "from": "",
- "Submit": u"登录",
+ "from": r"/",
+ "Submit": r"登录",
  "remember_me": "on"
    }
 
 s = requests.session()
 r = s.post(url, headers=headers, data=d)
 #print (r.content.decode('utf-8'))
+print(r.status_code)
 
 t = re.findall(r'<span>(.+?)</span>', r.content.decode('utf-8'))   # 用python3的这里r.content需要解码
 # print (t[0])
